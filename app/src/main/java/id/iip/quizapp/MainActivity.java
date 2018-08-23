@@ -35,19 +35,27 @@ public class MainActivity extends AppCompatActivity {
     public void submit(View view){
         if (a1 != null && a1.getText().toString().contains("washington")){
             score += 1;
+        } else {
+            score += 0;
         }
 
         RadioButton rb = (RadioButton)findViewById(a2.getCheckedRadioButtonId());
         if (rb != null && rb.getText().toString().equalsIgnoreCase("50")){
             score += 1;
+        } else {
+            score += 0;
         }
 
         if (a3 != null && a3.getText().toString().contains("trump")){
             score += 1;
+        } else {
+            score += 0;
         }
 
         if (a4_2.isChecked() && a4_4.isChecked()){
             score += 1;
+        } else {
+            score += 0;
         }
 
         Toast.makeText(this, "Total score : "+String.valueOf(score), Toast.LENGTH_SHORT).show();
